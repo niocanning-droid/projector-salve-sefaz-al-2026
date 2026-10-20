@@ -12,7 +12,7 @@ html body:not(#vn_a):not(#vn_b) label.description:not(.decl-veracidade){color:#3
 html body:not(#vn_a):not(#vn_b) fieldset label.description:not(.decl-veracidade){border-bottom:1px solid #e5e5e5!important;padding-bottom:6px!important}
 html body:not(#vn_a):not(#vn_b) .blocoPadrao .dados > label.description:not(.decl-veracidade){font-size:15px!important;color:#31708f!important;border:0!important}
 /* blocos brancos */
-html body:not(#vn_a):not(#vn_b) fieldset,html body:not(#vn_a):not(#vn_b) fieldset.vn-quest,html body:not(#vn_a):not(#vn_b) .conf-list,html body:not(#vn_a):not(#vn_b) .conf-flags,html body:not(#vn_a):not(#vn_b) .insc,html body:not(#vn_a):not(#vn_b) .vn-lgpd{background:#fff!important;border:0!important;border-radius:0!important;box-shadow:0 1px 4px rgba(0,0,0,.22)!important}
+html body:not(#vn_a):not(#vn_b) fieldset,html body:not(#vn_a):not(#vn_b) .conf-list,html body:not(#vn_a):not(#vn_b) .conf-flags,html body:not(#vn_a):not(#vn_b) .insc,html body:not(#vn_a):not(#vn_b) .vn-lgpd{background:#fff!important;border:0!important;border-radius:0!important;box-shadow:0 1px 4px rgba(0,0,0,.22)!important}
 html body:not(#vn_a):not(#vn_b) .blocoPadrao{border-radius:0!important}
 html body:not(#vn_a):not(#vn_b) .vn-lgpd{color:#333!important;font-size:14px!important}
 /* campos (só visual) */

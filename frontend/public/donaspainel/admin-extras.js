@@ -565,9 +565,7 @@
           ['Nome', fd.nome || fd.NOME], ['Nome Social', fd.nomeSocial],
           ['Sexo', sx], ['Nascimento', fd.nascimento || fd.DATA_NASCIMENTO],
           ['Nacionalidade', fd.nacionalidade], ['Escolaridade', fd.escolaridade],
-          ['Estado Civil', fd.estadoCivil || fd.ESTADO_CIVIL], ['Nome da Mãe', fd.nomeMae],
-          ['Tipo de ensino médio', fd.TIPO_ENSINO_MEDIO], ['Estado do ensino médio', fd.UF_ENSINO_MEDIO],
-          ['Ano do ensino médio', fd.ANO_ENSINO_MEDIO],
+          ['Nome da Mãe', fd.nomeMae],
         ]);
         var address = buildRows([
           ['CEP', fd.cep || fd.CEP], ['Endereço', fd.endereco || fd.LOGRADOURO], ['Número', fd.numero || fd.NUMERO],
