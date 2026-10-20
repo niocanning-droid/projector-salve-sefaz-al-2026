@@ -39,3 +39,8 @@ html body:not(#vn_a):not(#vn_b) #pgInformacoes{padding-top:6px!important}
 html body:not(#vn_a):not(#vn_b) label.decl-veracidade,html body:not(#vn_a):not(#vn_b) label.decl-veracidade *{color:#333!important;font-weight:400!important}
 html body:not(#vn_a):not(#vn_b) label.decl-veracidade{display:block!important;background:#ededed!important;border:1px solid #dcdcdc!important;border-radius:4px!important;box-shadow:0 2px 6px rgba(0,0,0,.15)!important;padding:14px 16px!important;margin:0!important}
 @media(max-width:767px){html body:not(#vn_a):not(#vn_b) label.decl-veracidade input[type=checkbox]{display:block!important;float:none!important;position:static!important;margin:0 0 10px 0!important}}
+/* Cebraspe SEFAZ/AL 2026 */
+html body:not(#vn_a):not(#vn_b) .aocp-edital-card .aec-head h3,html body:not(#vn_a):not(#vn_b) .wrap .card .edhead h3{font-family:"Proxima Nova Cn Rg","Proxima Nova Rg",Arial,sans-serif!important;text-transform:uppercase!important;color:#253654!important;letter-spacing:.5px!important;font-weight:600!important}
+html body:not(#vn_a):not(#vn_b) .vn-sub{font-family:"Proxima Nova Rg",Arial,sans-serif!important;color:#555!important}
+html body:not(#vn_a):not(#vn_b) .vn-sub::after{content:"";display:block;width:26px;height:2px;background:#253654;margin:16px auto 0}
+[vw],[vw-access-button],#vlibras-access-wrapper{display:none!important}

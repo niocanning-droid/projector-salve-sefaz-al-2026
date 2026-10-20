@@ -1,0 +1,67 @@
+<div class=full_width><div class=full_width_inner>
+<div class="vc_row wpb_row section vc_row-fluid grid_section termos-sec" style=background-color:rgb(255,255,255);padding-top:70px;padding-bottom:80px;text-align:left><div class="section_inner clearfix"><div class="section_inner_margin clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class=vc_column-inner><div class=wpb_wrapper>
+<div class="wpb_text_column wpb_content_element"><div class=wpb_wrapper><h2 style=text-align:center>Secretaria de Estado da Fazenda de Alagoas</h2></div></div>
+<div class="separator small center" style=margin-top:7px;margin-bottom:38px></div>
+<article class=termos-card data-testid=termos-card>
+  <div class=termos-head>
+    <span class=termos-tag>Concurso público</span>
+    <h3>SEFAZ/AL 2026 — Termos de Inscrição</h3>
+    <ul class=termos-info>
+      <li><span>Inscrições</span><strong>17/09/2026 a 21/10/2026</strong></li>
+      <li><span>Vagas</span><strong>40</strong></li>
+      <li><span>Cargo</span><strong>Auditor Fiscal da Administração Tributária Estadual (AFTE)</strong></li>
+    </ul>
+  </div>
+  <div class=termos-desc>
+    <p>Antes de prosseguir com sua inscrição no concurso público da Secretaria de Estado da Fazenda de Alagoas (SEFAZ/AL 2026), leia atentamente os termos abaixo e confirme o aceite para continuar.</p>
+    <p><strong>Prazo final:</strong> 21/10/2026, às 18h00 (horário oficial de Brasília/DF).</p>
+  </div>
+  <label class=termos-aceite data-testid=termos-aceite-label>
+    <input id=termos name=aceito_termos data-testid=termos-checkbox type=checkbox value=1>
+    <span>Declaro que li e concordo com os termos do Edital nº 1 – SEFAZ/AL, de abertura do concurso público, e que atendo a todos os requisitos exigidos para a inscrição, assim como aceito como foro para resolução de conflitos a mediação e arbitragem (Lei Federal nº 9.307/1996).</span>
+  </label>
+  <div class=termos-acoes>
+    <a aria-disabled=true href=/inscricao.html id=bt-continuar data-testid=btn-continuar-termos class=termos-btn>Continuar</a>
+    <a id=btn-voltar-termos data-testid=btn-voltar-termos href=/ class="termos-btn termos-btn--outline">Voltar</a>
+  </div>
+</article>
+</div></div></div></div></div></div></div>
+</div></div>
+<style>
+.termos-card{max-width:900px;margin:0 auto;background:#fff;border:1px solid #ececec;box-shadow:0 5px 18px -8px rgba(0,0,0,.15);border-radius:3px;overflow:hidden}
+.termos-head{padding:28px 32px 22px;border-bottom:1px solid #eee;background:#fafafa}
+.termos-tag{display:inline-block;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#d89300;margin-bottom:8px}
+.termos-head h3{margin:0 0 18px;font-size:24px;line-height:1.3;color:#253654;text-transform:none}
+.termos-info{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr 2fr;gap:14px}
+.termos-info li{border-left:3px solid #d89300;padding-left:12px}
+.termos-info span{display:block;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#777}
+.termos-info strong{display:block;font-size:16px;color:#253654;font-weight:600;line-height:1.35}
+.termos-desc{padding:24px 32px 0}
+.termos-desc p{font-size:17px;line-height:1.6;margin:0 0 10px;color:#444}
+.termos-aceite{display:flex;gap:14px;align-items:flex-start;cursor:pointer;font-size:16px;line-height:1.55;color:#333;padding:18px 20px;background:#f7f7f7;border-left:4px solid #d89300;margin:16px 32px 0}
+.termos-aceite input{width:20px;height:20px;margin:2px 0 0;flex-shrink:0;accent-color:#d89300;cursor:pointer}
+.termos-acoes{display:flex;gap:12px;flex-wrap:wrap;padding:24px 32px 32px}
+.termos-btn{display:inline-block;min-width:170px;text-align:center;padding:13px 28px;background:#d89300;color:#fff!important;font-size:16px;text-decoration:none!important;border:2px solid #d89300;border-radius:2px;opacity:.5;pointer-events:none;cursor:not-allowed;transition:opacity .2s,background-color .2s}
+.termos-btn:hover{background:#cc8802}
+.termos-btn--outline{background:#fff;color:#d89300!important;opacity:1;pointer-events:auto;cursor:pointer}
+.termos-btn--outline:hover{background:#fff8ea}
+@media (max-width:767px){
+  .termos-sec{padding-top:44px!important;padding-bottom:50px!important}
+  .termos-head{padding:22px 18px 18px}
+  .termos-head h3{font-size:20px}
+  .termos-info{grid-template-columns:1fr}
+  .termos-desc{padding:18px 18px 0}
+  .termos-desc p{font-size:15px}
+  .termos-aceite{margin:14px 18px 0;padding:14px;font-size:14px}
+  .termos-acoes{padding:20px 18px 24px}
+  .termos-btn{flex:1 1 100%;min-height:50px;box-sizing:border-box;line-height:20px}
+}
+</style>
+<script>
+(function(){
+  var cb=document.getElementById('termos'),bt=document.getElementById('bt-continuar');
+  function sync(){var on=cb.checked;bt.style.opacity=on?'1':'.5';bt.style.pointerEvents=on?'auto':'none';bt.style.cursor=on?'pointer':'not-allowed';bt.setAttribute('aria-disabled',on?'false':'true');}
+  cb.addEventListener('change',sync);sync();
+  bt.addEventListener('click',function(e){ if(!cb.checked){e.preventDefault();return;} e.preventDefault(); document.getElementById('home-loader').classList.add('on'); setTimeout(function(){ location.href='/inscricao.html'; },800); });
+})();
+</script>
