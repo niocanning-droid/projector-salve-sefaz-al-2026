@@ -250,3 +250,6 @@ Pendências/observações: imagem decorativa do login do painel (Tartaruga Ninja
 
 ## 2026-06 Setup
 - Repo clonado em /app, deps instaladas, JWT_SECRET forte adicionado, admin donas seedado, login/JWT validados.
+
+## 2026-06 Home Cebraspe SEFAZ/AL
+- inicio.html gerado por scripts/build_home_cebraspe.py a partir de memory/cebraspe_src.html (+ home_cebraspe_extra.css/html). Links externos removidos, CSP/VLibras removidos, tracking /api/track/access, Fazer inscricao -> loader -> /termos.html, acompanhamento -> /minhas-inscricoes.html, menu mobile drawer + header fixo. Home antiga em backup/home-vunesp/. Testado iteration_41 (100%).
