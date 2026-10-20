@@ -253,3 +253,6 @@ Pendências/observações: imagem decorativa do login do painel (Tartaruga Ninja
 
 ## 2026-06 Home Cebraspe SEFAZ/AL
 - inicio.html gerado por scripts/build_home_cebraspe.py a partir de memory/cebraspe_src.html (+ home_cebraspe_extra.css/html). Links externos removidos, CSP/VLibras removidos, tracking /api/track/access, Fazer inscricao -> loader -> /termos.html, acompanhamento -> /minhas-inscricoes.html, menu mobile drawer + header fixo. Home antiga em backup/home-vunesp/. Testado iteration_41 (100%).
+
+## 2026-06 Cebraspe header/footer em todas as páginas
+- seduc/seduc-theme.js v17 injeta header/footer Cebraspe (cebraspe/parts.json, chrome.css, fonts.css) gerados por scripts/build_cebraspe_chrome.py; termos.html gerado com layout Cebraspe (scripts/termos_content.html; container 1600px, fontes maiores, checkbox custom). Infos do concurso atualizadas via scripts/update_concurso_pages.py. Backups em backup/pages-vunesp. Pendentes: backend email/PIX fallback/telegram ainda com Vestibular Unesp; opções de curso UNESP no formulário (campos mantidos a pedido).

@@ -1180,8 +1180,6 @@ async def export_cadastros_full_txt(q: str = '', user=Depends(require_admin)):
     # Rótulos amigáveis para os campos do form_data
     LABELS = [
         ('NOME', 'Nome'), ('CPF', 'CPF'), ('DATA_NASCIMENTO', 'Nascimento'), ('SEXO', 'Sexo'),
-        ('ESTADO_CIVIL', 'Estado Civil'), ('TIPO_ENSINO_MEDIO', 'Tipo Ens. Médio'),
-        ('UF_ENSINO_MEDIO', 'Estado Ens. Médio'), ('ANO_ENSINO_MEDIO', 'Ano Ens. Médio'),
         ('CEP', 'CEP'), ('LOGRADOURO', 'Endereço'), ('NUMERO', 'Número'),
         ('COMPLEMENTO', 'Complemento'), ('BAIRRO', 'Bairro'), ('CIDADE', 'Cidade'), ('UF', 'UF'),
         ('CELULAR', 'Celular'), ('EMAIL', 'E-mail'), ('DOC_TIPO', 'Documento'),
