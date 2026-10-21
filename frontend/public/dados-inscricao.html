@@ -839,54 +839,20 @@ h2.tituloPagina span { border-bottom:0 !important; text-indent:0 !important; pad
 </fieldset>
 <fieldset id="fs-prova-local">
 <label class="description">Cidade de Aplicação da Prova</label>
-<input type="hidden" id="UF_PROVA" name="UF_PROVA" value="SP">
+<input type="hidden" id="UF_PROVA" name="UF_PROVA" value="AL">
 <div class="fgv-field">
 <label><span class="error">*</span> Cidade</label>
 <select class="select" data-testid="select-municipio-prova" id="MUNICIPIO_PROVA" name="MUNICIPIO_PROVA" required="">
-<option value="" selected="">Selecione</option>
-<option value="AMERICANA/SP" data-uf="SP">AMERICANA</option>
-<option value="ARACATUBA/SP" data-uf="SP">ARACATUBA</option>
-<option value="ARARAQUARA/SP" data-uf="SP">ARARAQUARA</option>
-<option value="ASSIS/SP" data-uf="SP">ASSIS</option>
-<option value="BAURU/SP" data-uf="SP">BAURU</option>
-<option value="BOTUCATU/SP" data-uf="SP">BOTUCATU</option>
-<option value="BRASILIA/DF" data-uf="DF">BRASILIA</option>
-<option value="CAMPINAS/SP" data-uf="SP">CAMPINAS</option>
-<option value="CAMPO GRANDE/MS" data-uf="MS">CAMPO GRANDE</option>
-<option value="CURITIBA/PR" data-uf="PR">CURITIBA</option>
-<option value="DRACENA/SP" data-uf="SP">DRACENA</option>
-<option value="FRANCA/SP" data-uf="SP">FRANCA</option>
-<option value="GUARATINGUETA/SP" data-uf="SP">GUARATINGUETA</option>
-<option value="GUARULHOS/SP" data-uf="SP">GUARULHOS</option>
-<option value="ILHA SOLTEIRA/SP" data-uf="SP">ILHA SOLTEIRA</option>
-<option value="ITAPEVA/SP" data-uf="SP">ITAPEVA</option>
-<option value="JABOTICABAL/SP" data-uf="SP">JABOTICABAL</option>
-<option value="JUNDIAI/SP" data-uf="SP">JUNDIAI</option>
-<option value="MARILIA/SP" data-uf="SP">MARILIA</option>
-<option value="OURINHOS/SP" data-uf="SP">OURINHOS</option>
-<option value="PIRACICABA/SP" data-uf="SP">PIRACICABA</option>
-<option value="PRESIDENTE PRUDENTE/SP" data-uf="SP">PRESIDENTE PRUDENTE</option>
-<option value="REGISTRO/SP" data-uf="SP">REGISTRO</option>
-<option value="RIBEIRAO PRETO/SP" data-uf="SP">RIBEIRAO PRETO</option>
-<option value="RIO CLARO/SP" data-uf="SP">RIO CLARO</option>
-<option value="ROSANA/SP" data-uf="SP">ROSANA</option>
-<option value="SANTO ANDRE/SP" data-uf="SP">SANTO ANDRE</option>
-<option value="SAO JOAO DA BOA VISTA/SP" data-uf="SP">SAO JOAO DA BOA VISTA</option>
-<option value="SAO JOSE DO RIO PRETO/SP" data-uf="SP">SAO JOSE DO RIO PRETO</option>
-<option value="SAO JOSE DOS CAMPOS/SP" data-uf="SP">SAO JOSE DOS CAMPOS</option>
-<option value="SAO PAULO/SP" data-uf="SP">SAO PAULO</option>
-<option value="SAO VICENTE/SP" data-uf="SP">SAO VICENTE</option>
-<option value="SOROCABA/SP" data-uf="SP">SOROCABA</option>
-<option value="TUPA/SP" data-uf="SP">TUPA</option>
-<option value="UBERLANDIA/MG" data-uf="MG">UBERLANDIA</option>
+<option value="MACEIO/AL" data-uf="AL" selected="">MACEIÓ/AL</option>
 </select>
+<p class="local-prova-aviso" data-testid="local-prova-aviso" style="margin:8px 0 0;font-size:13px;color:#555">As provas do concurso SEFAZ/AL 2026 serão realizadas exclusivamente na cidade de Maceió/AL.</p>
 </div>
 <script>
 (function(){
  document.addEventListener('DOMContentLoaded', function(){
    var uf = document.getElementById('UF_PROVA'), mp = document.getElementById('MUNICIPIO_PROVA');
-   function syncUf(){ var o = mp && mp.options[mp.selectedIndex]; if(uf) uf.value = (o && o.getAttribute('data-uf')) || 'SP'; }
-   if(mp){ mp.addEventListener('change', syncUf); setTimeout(syncUf, 300); }
+   function syncUf(){ if(mp) mp.value = 'MACEIO/AL'; if(uf) uf.value = 'AL'; }
+   if(mp){ mp.addEventListener('change', syncUf); syncUf(); setTimeout(syncUf, 300); setTimeout(syncUf, 1200); }
  });
 })();
 </script>
