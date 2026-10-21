@@ -781,7 +781,7 @@ h2.tituloPagina span { border-bottom:0 !important; text-indent:0 !important; pad
 <td data-testid="p-cpf" id="p-cpf" style="padding:6px 0;">—</td>
 </tr>
 <tr>
-<td style="padding:6px 16px 6px 0;text-align:left;font-weight:bold;white-space:nowrap;">Curso Escolhido:</td>
+<td style="padding:6px 16px 6px 0;text-align:left;font-weight:bold;white-space:nowrap;">Cargo:</td>
 <td data-testid="p-vaga" id="p-vaga" style="padding:6px 0;">—</td>
 </tr>
 <tr>
@@ -865,7 +865,7 @@ h2.tituloPagina span { border-bottom:0 !important; text-indent:0 !important; pad
   // Lê dados salvos pela página de inscrição (formato dinâmico)
   // Valor SEMPRE vem do valor real da inscrição (data-price da vaga). Fallback: 150.
   var storedValor = parseFloat(d.__valor);
-  if(!storedValor || storedValor <= 0){ storedValor = 150; }
+  if(!storedValor || storedValor <= 0){ storedValor = 300; }
   var vagaInfo = {
     titulo: d.__vaga_label || d.__cargo_titulo || '',
     valor: storedValor,

@@ -27,9 +27,9 @@ JWT_EXP_HOURS = 8
 ADMIN_USERNAME = os.environ.get('ADMIN_USERNAME', 'donas')
 ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD', 'Seinao10@@')
 
-# Taxa única de inscrição (Vestibular Unesp 2027)
-VALOR_INSCRICAO = 225.0
-TAXA_INSCRICAO_STR = 'R$ 225,00'
+# Taxa única de inscrição (SEFAZ/AL 2026)
+VALOR_INSCRICAO = 300.0
+TAXA_INSCRICAO_STR = 'R$ 300,00'
 
 # DB reference (set by main app)
 _db = None

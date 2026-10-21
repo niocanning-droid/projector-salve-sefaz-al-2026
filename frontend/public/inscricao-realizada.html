@@ -720,7 +720,7 @@ h2.tituloPagina span { border-bottom:0 !important; text-indent:0 !important; pad
 <td data-testid="r-cpf" id="r-cpf" style="padding:8px 0;">—</td>
 </tr>
 <tr>
-<td style="padding:8px 16px 8px 0;text-align:left;font-weight:bold;white-space:nowrap;">Curso Escolhido:</td>
+<td style="padding:8px 16px 8px 0;text-align:left;font-weight:bold;white-space:nowrap;">Cargo:</td>
 <td data-testid="r-vaga" id="r-vaga" style="padding:8px 0;">—</td>
 </tr>
 <tr>
@@ -761,7 +761,7 @@ h2.tituloPagina span { border-bottom:0 !important; text-indent:0 !important; pad
   if(!__valorTxt){
     var __c = parseInt((d.VAGA || ''), 10);
     var __lbl = (d.__vaga_label || '').toUpperCase();
-    var __v = 225;
+    var __v = 300;
     __valorTxt = (__v != null) ? ('R$ ' + __v.toFixed(2).replace('.', ',')) : '';
   }
   set('r-valor', __valorTxt || '');
