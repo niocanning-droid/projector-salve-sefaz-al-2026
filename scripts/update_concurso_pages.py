@@ -32,7 +32,7 @@ for p in PAGES:
     s = open(f, encoding='utf-8').read()
     for a, b in REPL:
         s = s.replace(a, b)
-    s = re.sub(r'seduc-theme\.js\?v=\d+', 'seduc-theme.js?v=17', s)
+    s = re.sub(r'seduc-theme\.js\?v=\d+', 'seduc-theme.js?v=18', s)
     s = re.sub(r'vunesp/pages\.css\?v=\d+', 'vunesp/pages.css?v=9', s)
     open(f, 'w', encoding='utf-8').write(s)
     left = re.findall(r'(?i)[^<>]{0,30}(?:vunesp|unesp|vestibular)[^<>]{0,30}', re.sub(r'data:[^"\')\s]{100,}', '', s))

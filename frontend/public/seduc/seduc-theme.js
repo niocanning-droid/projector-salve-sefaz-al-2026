@@ -1,5 +1,5 @@
 (function(){
-var V='17';
+var V='18';
 function fontsLink(){
  if(document.getElementById('ceb-fonts'))return;
  var l=document.createElement('link');l.id='ceb-fonts';l.rel='stylesheet';l.href='/cebraspe/fonts.css?v='+V;document.head.appendChild(l);
@@ -35,7 +35,9 @@ function menu(r){
 function build(p){
  if(document.getElementById('seduc-header-host'))return;
  fontsLink();
- menu(host('seduc-header-host',p.h,p.cls,true));
+ var hr=host('seduc-header-host',p.h,p.cls,true);
+ if(/minhas-inscricoes/.test(location.pathname)){hr.querySelectorAll('.header__action-follow-button,[data-testid=header-minhas-inscricoes-btn]').forEach(function(el){el.remove();});}
+ menu(hr);
  document.querySelectorAll('#aocp-footer,.seduc-footer').forEach(function(el){el.remove();});
  host('vunesp-footer-host',p.f,p.cls,false);
 }
