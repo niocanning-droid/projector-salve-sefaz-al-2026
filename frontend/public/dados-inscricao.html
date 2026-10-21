@@ -784,7 +784,7 @@ h2.tituloPagina span { border-bottom:0 !important; text-indent:0 !important; pad
 <form action="" enctype="multipart/form-data" id="frm-style-list" method="post">
 <label class="description">Preencha os campos abaixo. Todos os campos marcados com * são obrigatórios.</label>
 <fieldset>
-<label class="description">Cargo</label>
+<label class="description">Vaga</label>
 <label class="description error"></label>
 <div id="edital-field" class="fgv-field" style="display:none !important"><label><span class="error">*</span> Selecione o Edital</label>
 <select class="select" data-testid="select-concurso" id="CONCURSO_TIPO">
@@ -794,7 +794,8 @@ h2.tituloPagina span { border-bottom:0 !important; text-indent:0 !important; pad
 <select class="select" data-testid="select-vaga" id="VAGA" name="VAGA" required="">
 <option value="1" data-price="300.00" selected="">Auditor Fiscal da Administração Tributária Estadual (AFTE)</option>
 </select>
-<p data-testid="taxa-inscricao-info" style="margin:8px 0 0;font-size:13px;color:#555">Taxa de inscrição: <b>R$ 300,00</b></p></div>
+<style>.cargo-nome-info{display:none}@media(max-width:640px){.cargo-nome-info{display:block}}</style><p class="cargo-nome-info" data-testid="cargo-nome-info" style="margin:8px 0 0;font-size:13px;color:#333;line-height:1.4">Auditor Fiscal da Administração Tributária Estadual (AFTE)</p>
+<p data-testid="taxa-inscricao-info" style="margin:4px 0 0;font-size:13px;color:#555">Taxa de inscrição: <b>R$ 300,00</b></p></div>
 <script>(function(){function f(){var v=document.getElementById('VAGA');if(v){v.value='1';v.dispatchEvent(new Event('change',{bubbles:true}));}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f();})();</script>
 
 </fieldset>
