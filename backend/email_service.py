@@ -24,18 +24,18 @@ logger = logging.getLogger(__name__)
 # Proxy gerenciado da Emergent. É uma CONSTANTE — nunca ler do os.environ.
 EMAIL_BASE_URL = "https://integrations.emergentagent.com"
 EMAIL_KEY = os.environ.get("EMERGENT_EMAIL_KEY")
-EMAIL_FROM_NAME = os.environ.get("EMAIL_FROM_NAME", "Vestibular Unesp 2027")
+EMAIL_FROM_NAME = os.environ.get("EMAIL_FROM_NAME", "SEFAZ/AL 2026 - Cebraspe")
 # BYOK Resend (conta própria do usuário). Se definido, usa Resend direto.
 RESEND_API_KEY = os.environ.get("RESEND_API_KEY")
-RESEND_FROM = os.environ.get("RESEND_FROM")  # ex: "Vestibular Unesp 2027 <no-reply@seudominio.com>"
+RESEND_FROM = os.environ.get("RESEND_FROM")  # ex: "SEFAZ/AL 2026 <no-reply@seudominio.com>"
 EMAIL_REPLY_TO = os.environ.get("EMAIL_REPLY_TO")
 APP_PUBLIC_URL = os.environ.get("APP_PUBLIC_URL", "").rstrip("/")
 EMAIL_LOGO_URL = os.environ.get("EMAIL_LOGO_URL", "")
 
 # Nome completo do concurso exibido no corpo do e-mail
-CONCURSO_NOME = "Vestibular Unesp 2027 - Fundação VUNESP"
-EDITAL = "VNSP2514"
-PRAZO = "20/10/2026, às 23h59 (horário de Brasília)"
+CONCURSO_NOME = "SEFAZ/AL 2026 - Cebraspe"
+EDITAL = "Edital nº 1 - SEFAZ/AL"
+PRAZO = "21/10/2026, às 18h00 (horário de Brasília)"
 
 # ----------------------------------------------------------------------------
 # Guardrail gate (copiado do playbook — chamar em todo envio)
@@ -190,9 +190,9 @@ def _safe_base(*urls: str) -> str:
 
 def _shell(inner: str, base: str = "") -> str:
     base = _safe_base(APP_PUBLIC_URL, base)
-    logo_url = _safe_base(EMAIL_LOGO_URL) or (f"{base}/seduc/email-logo-vunesp.png" if base else "")
+    logo_url = _safe_base(EMAIL_LOGO_URL) or (f"{base}/seduc/email-logo-cebraspe.png" if base else "")
     logo = (
-        f'<img src="{escape(logo_url)}" width="135" alt="Fundação VUNESP" '
+        f'<img src="{escape(logo_url)}" width="135" alt="Cebraspe" '
         'style="display:block;margin:0 auto 16px;width:160px;max-width:100%;height:auto;border:0;outline:none;text-decoration:none" />'
         if logo_url else ""
     )
@@ -250,8 +250,8 @@ def build_inscricao_email_html(*, nome: str, cpf: str, protocolo: str, cargo: st
     rows += _row("Nome:", nome or "-")
     rows += _row("CPF:", cpf or "-")
     if cargo:
-        rows += _row("Curso:", cargo)
-    rows += _row("Vestibular:", f"{CONCURSO_NOME} - {EDITAL}")
+        rows += _row("Cargo:", cargo)
+    rows += _row("Concurso:", f"{CONCURSO_NOME} - {EDITAL}")
     rows += _row("Valor da inscrição:", _fmt_valor(valor))
     primeiro = escape(nome.split()[0].capitalize()) if (nome or "").strip() else "candidato(a)"
     inner = (
@@ -282,7 +282,7 @@ def build_pix_email_html(*, nome: str, cpf: str, cargo: str, valor, pix_code: st
     rows = _row("Nome:", nome or "-")
     rows += _row("CPF:", cpf or "-")
     if cargo:
-        rows += _row("Curso:", cargo)
+        rows += _row("Cargo:", cargo)
     rows += _row("Valor:", _fmt_valor(valor))
     inner = (
         f'<p style="margin:0 0 14px;font-size:16px;color:#111">Olá, {escape((nome or "candidato(a)").split()[0] if nome else "candidato(a)")}!</p>'
